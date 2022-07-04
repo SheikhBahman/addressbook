@@ -27,9 +27,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sshagent(['deploy user']){
-                  sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Bahman_Jenkins_Tomcat_Pipeline_Project/target/addressbook-2.0.war ec2-user@54-86-121-15:/var/lib/tomcat9/webapps/'
-                }
+                sh "ls"
             }
         }
     }
